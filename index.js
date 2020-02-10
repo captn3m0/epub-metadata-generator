@@ -37,7 +37,7 @@ function _convert(data, pretty) {
 module.exports = {
   write: function(filepath, isbn) {
     OL.lookup(isbn, function(err, data) {
-      fs.writeFileSync(filepath, _convert(data));
+      fs.writeFileSync(filepath, _convert(data, true));
     });
   },
   _convert: _convert
