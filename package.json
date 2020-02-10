@@ -1,0 +1,24 @@
+{
+  "name": "epub-metadata-generator",
+  "version": "1.0.0",
+  "description": "Generates EPUB metadata files from various sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "epub",
+    "epub-generator",
+    "epub-generation",
+    "openlibrary"
+  ],
+  "author": "Abhay Rana <npm@captnemo.in>",
+  "license": "MIT",
+  "dependencies": {
+    "node-isbn-catalogue": "^1.2.3",
+    "xmlbuilder": "^13.0.2"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
