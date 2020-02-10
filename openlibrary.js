@@ -48,18 +48,14 @@ module.exports = {
         });
       }
 
-      if (undefined !== book.details.cover) {
-        if (undefined !== book.details.cover.small) {
-          standardBook.imageLinks.smallThumbnail = book.details.cover.small;
-        }
+      console.log(JSON.stringify(book.details));
 
-        if (undefined !== book.details.cover.large) {
-          standardBook.imageLinks.cover = book.details.cover.large;
-        }
+      if (undefined !== book.details.covers) {
+        let coverId = book.details.covers[0];
 
-        if (undefined !== book.details.cover.medium) {
-          standardBook.imageLinks.thumnail = book.details.cover.medium;
-        }
+        standardBook.imageLinks.small = `https://covers.openlibrary.org/b/id/${coverId}-S.jpg`;
+        standardBook.imageLinks.medium = `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`;
+        standardBook.imageLinks.large = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`;
       }
 
       if (book.details.publishers) {
