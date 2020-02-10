@@ -17,10 +17,7 @@ module.exports = {
         pageCount: book.details.number_of_pages,
         printType: "BOOK",
         categories: [],
-        imageLinks: {
-          smallThumbnail: book.thumbnail_url,
-          thumbnail: book.thumbnail_url
-        },
+        imageLinks: {},
         previewLink: book.preview_url,
         infoLink: book.info_url
       };
@@ -49,6 +46,20 @@ module.exports = {
           type: "LibraryThing",
           identifier: book.details.librarything
         });
+      }
+
+      if (undefined !== book.details.cover) {
+        if (undefined !== book.details.cover.small) {
+          standardBook.imageLinks.smallThumbnail = book.details.cover.small;
+        }
+
+        if (undefined !== book.details.cover.large) {
+          standardBook.imageLinks.cover = book.details.cover.large;
+        }
+
+        if (undefined !== book.details.cover.medium) {
+          standardBook.imageLinks.thumnail = book.details.cover.medium;
+        }
       }
 
       if (book.details.publishers) {

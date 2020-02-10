@@ -20,15 +20,39 @@ function _convert(data, pretty) {
   }
 
   contents.ele("dc:title", { id: "title" }, data.title);
-  contents.ele("dc:title", { id: "subtitle" }, data.description);
-  contents.ele(
-    "meta",
-    { refines: "#subtitle", property: "title-type" },
-    "subtitle"
-  );
+
+  if (undefined !== data.description) {
+    contents.ele("dc:title", { id: "subtitle" }, data.description);
+    contents.ele(
+      "meta",
+      { refines: "#subtitle", property: "title-type" },
+      "subtitle"
+    );
+  }
 
   contents.ele("dc:language", {}, data.language);
   contents.ele("dc:publisher", {}, data.publisher);
+
+  let date = new Date(Date.parse(data.publishedDate));
+
+  function pad(number) {
+    if (number < 10) {
+      return "0" + number;
+    }
+    return number;
+  }
+
+  let epubDate =
+    date.getUTCFullYear() +
+    "-" +
+    pad(date.getUTCMonth() + 1) +
+    "-" +
+    pad(date.getUTCDate());
+
+  contents.ele("dc:date", {}, epubDate);
+  if (undefined !== data.imageLinks.cover) {
+    contents.ele("dc:identifier", { id: "cover-url" }, data.imageLinks.cover);
+  }
 
   let blob = contents.end({ pretty: pretty });
   return blob;

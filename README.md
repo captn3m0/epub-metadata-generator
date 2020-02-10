@@ -2,7 +2,7 @@
 
 Generates a `metadata.xml` file for an EPUB from various online sources, given a few identifiers.
 
-Currently supports the following:
+Currently supports the following providers:
 
 |Provider|Input|
 |--------|-----|
