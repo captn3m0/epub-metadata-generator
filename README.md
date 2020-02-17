@@ -37,6 +37,10 @@ cat /tmp/9780596101190.xml
 </metadata>
 ```
 
+You can use this file in `pandoc` directly:
+
+`pandoc input.html --epub-metadata=/tmp/9780596101190.xml file.epub`
+
 ## License
 
 Licensed under the [MIT License](https://nemo.mit-license.org/). See LICENSE file for details.

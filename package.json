@@ -10,7 +10,9 @@
     "epub",
     "epub-generator",
     "epub-generation",
-    "openlibrary"
+    "openlibrary",
+    "pandoc",
+    "opf"
   ],
   "author": "Abhay Rana <npm@captnemo.in>",
   "license": "MIT",
