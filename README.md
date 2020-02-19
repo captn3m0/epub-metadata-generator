@@ -8,14 +8,17 @@ Currently supports the following providers:
 |--------|-----|
 |OpenLibrary|ISBN|
 
-## Usage
+## Installation
 
-```javascript
-const E = require('epub-metadata-generator')
-E.write(filepath, ISBN);
+You can install it from NPM
+
+```
+npm i -g epub-metadata-generator
 ```
 
-Alternatively, you can use the provided command-line-executable:
+## Usage
+
+You can use the provided command-line-executable:
 
 ```sh
 generate-epub-xml 9780596101190 /tmp/9780596101190.xml
@@ -40,6 +43,13 @@ cat /tmp/9780596101190.xml
 You can use this file in `pandoc` directly:
 
 `pandoc input.html --epub-metadata=/tmp/9780596101190.xml file.epub`
+
+Alternatively, you can use the NPM package programatically as well:
+
+```javascript
+const E = require('epub-metadata-generator')
+E.write(filepath, ISBN);
+```
 
 ## License
 
