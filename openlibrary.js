@@ -48,8 +48,6 @@ module.exports = {
         });
       }
 
-      console.log(JSON.stringify(book.details));
-
       if (undefined !== book.details.covers) {
         let coverId = book.details.covers[0];
 

@@ -34,6 +34,6 @@ test("the xml generator to work", () => {
   };
   let xml = generator._convert(input, false);
   expect(xml).toBe(
-    `<?xml version="1.0"?><metadata><dc:identifier opf:scheme="ISBN-13">9780596101190</dc:identifier><dc:identifier opf:scheme="ISBN-10">0596101198</dc:identifier><dc:creator opf:role="aut">Dan Woods</dc:creator><dc:creator opf:role="aut">Gautam Guliani</dc:creator><dc:title id="title">Open Source for the Enterprise</dc:title><dc:title id="subtitle">Managing Risks, Reaping Rewards</dc:title><meta refines="#subtitle" property="title-type">subtitle</meta><dc:language>eng</dc:language><dc:publisher>O'Reilly Media, Inc.</dc:publisher></metadata>`
+    `<?xml version="1.0"?><package unique-identifier="uuid_id" xmlns="http://www.idpf.org/2007/opf"><metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:identifier opf:scheme="ISBN-13">9780596101190</dc:identifier><dc:identifier opf:scheme="ISBN-10">0596101198</dc:identifier><dc:creator opf:role="aut">Dan Woods</dc:creator><dc:creator opf:role="aut">Gautam Guliani</dc:creator><dc:title id="title">Open Source for the Enterprise</dc:title><dc:title id="subtitle">Managing Risks, Reaping Rewards</dc:title><meta refines="#subtitle" property="title-type">subtitle</meta><dc:language>eng</dc:language><dc:publisher>O'Reilly Media, Inc.</dc:publisher><dc:date>2005-07-26</dc:date></metadata></package>`
   );
 });
