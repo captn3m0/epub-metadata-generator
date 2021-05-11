@@ -1,6 +1,6 @@
 {
   "name": "epub-metadata-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates EPUB metadata files from various sources",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,10 @@
   "license": "MIT",
   "dependencies": {
     "node-isbn-catalogue": "^1.2.3",
-    "xmlbuilder": "^13.0.2"
+    "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
-    "jest": "^25.1.0"
+    "jest": "^26.3.3"
   },
   "bin": {
     "generate-epub-xml": "./cli.js"
