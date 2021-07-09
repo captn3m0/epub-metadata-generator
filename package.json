@@ -21,7 +21,7 @@
     "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
-    "jest": "^26.3.3"
+    "jest": "^27.0.6"
   },
   "bin": {
     "generate-epub-xml": "./cli.js"
