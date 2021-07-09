@@ -1,6 +1,6 @@
 {
   "name": "epub-metadata-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generates EPUB metadata files from various sources",
   "main": "index.js",
   "scripts": {
